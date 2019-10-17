@@ -1,0 +1,28 @@
+# Project: fifth
+# Makefile created by Dev-C++ 5.11
+
+CPP      = g++.exe
+CC       = gcc.exe
+WINDRES  = windres.exe
+OBJ      = "the\ fifth.o"
+LINKOBJ  = "the fifth.o"
+LIBS     = -L"D:/Apps/Dev-Cpp/MinGW64/lib" -L"D:/Apps/Dev-Cpp/MinGW64/x86_64-w64-mingw32/lib" -static-libgcc
+INCS     = -I"D:/Apps/Dev-Cpp/MinGW64/include" -I"D:/Apps/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"D:/Apps/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include"
+CXXINCS  = -I"D:/Apps/Dev-Cpp/MinGW64/include" -I"D:/Apps/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"D:/Apps/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include" -I"D:/Apps/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include/c++"
+BIN      = fifth.exe
+CXXFLAGS = $(CXXINCS) -O2
+CFLAGS   = $(INCS) -O2
+RM       = rm.exe -f
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before $(BIN) all-after
+
+clean: clean-custom
+	${RM} $(OBJ) $(BIN)
+
+$(BIN): $(OBJ)
+	$(CPP) $(LINKOBJ) -o $(BIN) $(LIBS)
+
+"the\ fifth.o": the\ fifth.cpp
+	$(CPP) -c "the fifth.cpp" -o "the fifth.o" $(CXXFLAGS)
