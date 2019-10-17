@@ -1,0 +1,6 @@
+py ./judge.py human human
+py ./judge.py
+
+关于s2 s3相等 后来应该积极放 前面不需要
+关于后手特殊点放板
+关于控制板子的使用 不用太多
